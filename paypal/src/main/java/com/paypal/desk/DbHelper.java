@@ -1,7 +1,5 @@
 package com.paypal.desk;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +7,7 @@ import java.util.List;
 public class DbHelper {
 
     private static final Connection connection = getConnection();
-
+ 
     private static Connection getConnection() {
         try {
             Connection connection = DriverManager.getConnection(
@@ -17,7 +15,7 @@ public class DbHelper {
                     "root",
                     ""
             );
-
+            
             System.out.println("Connection successful");
             return connection;
         } catch (SQLException e) {
